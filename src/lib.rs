@@ -2,9 +2,8 @@
 
 //! A very basic libstd front
 //!
-//! This is where all the stuff relating to processes is, including context switching, interrupts,
-//! and processes/threads. Because of order of initialization and their use in interrupt handling
-//! acpi and apic are in here as well.
+//! This is almost totally independent of the runtime of rust, relying only
+//! on the presence of allocation defined within liballoc.
 
 #![crate_name="basicstd"]
 #![crate_type="rlib"]
