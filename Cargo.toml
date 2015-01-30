@@ -6,3 +6,6 @@ authors = [ "Alexander Light <scialexlight@gmail.com>" ]
 [lib]
 name = "basicstd"
 crate-type = [ "rlib" ]
+
+[features]
+spin = []
