@@ -76,7 +76,7 @@ pub use alloc::arc::{Arc, Weak};
     const INITIALIZED  : usize = 2;
 
     /// A once implementation that will have other threads spin when the initialization is being done.
-    /// Use only with extreeme caution. Prefer procs::sync::Once if possible.
+    /// Use only with extreme caution.
     pub struct Once {
         /// What the current state is.
         state: AtomicUsize,
@@ -102,7 +102,7 @@ pub use alloc::arc::{Arc, Weak};
                 f();
                 self.state.store(INITIALIZED, SeqCst);
                 true
-            } else if self.state.load(SeqCst) == INITIALIZED { false } else {
+            } else {
                 while self.state.load(SeqCst) != INITIALIZED { }
                 false
             }
