@@ -1,0 +1,8 @@
+[package]
+name = "basicstd"
+version = "0.0.1"
+authors = [ "Alexander Light <scialexlight@gmail.com>" ]
+
+[lib]
+name = "basicstd"
+crate-type = [ "rlib" ]
