@@ -48,8 +48,7 @@ pub mod collections;
 
 pub mod rand {
     pub use rrand::*;
-    /// This is just a front. We will use what we have, which is a IsaacRng. The rng will be based
-    /// on the current threads pid.
+    /// This is just a front. We will use what we have, which is a IsaacRng.
     #[derive(Clone)]
     #[allow(missing_copy_implementations)]
     pub struct ThreadRng(IsaacRng);
